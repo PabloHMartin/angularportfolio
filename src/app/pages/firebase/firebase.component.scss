@@ -1,0 +1,221 @@
+#firebase{
+    padding: 2em;
+    padding-top: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main{
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  height: 4rem;
+  justify-content: space-between;
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    color:#009688;
+    font-weight: 700;
+}
+.subtitle{
+    font-size: 0.8em;
+    color: gray;
+}
+figure{
+    height: 20rem;
+    display: flex;
+}
+#dashboard_img{
+    width: 300px;
+}
+#skills{
+    width: 100%;
+    margin-top: 18rem;
+}
+mat-card{
+    margin: 3em 0;
+}
+mat-card-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 1.5em 0;
+        button{
+            background: linear-gradient(to left, #4db6ac, #048376);
+        }
+    }
+    .social_login{
+         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        button{
+            background: linear-gradient(to left, #4db6ac, #048376);
+            margin: 0.5em 0;
+            i{
+                margin-right: 20px;
+            }
+        }
+    }
+
+}
+#firestore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .numero{
+        margin: 2em 0;
+        font-size: 4em;
+        color: #048376;
+        height: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .fecha{
+            font-size: 0.2em;
+            color: grey;
+        }
+    }
+    .botonera{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        button{
+            background: linear-gradient(to left, #4db6ac, #048376);
+        }
+    }
+}
+mat-card{
+    margin-top: 3em;
+    width: 100%;
+    height: 30rem;
+        header{
+            h2{
+                font-family: 'Montserrat', sans-serif;
+                color:#009688;
+                font-weight: 700;
+                font-size: 1.5em;
+            }
+            p{
+            font-size: 0.8em;
+            color: gray;
+            }
+        }
+
+}
+
+
+@media only screen and (min-width: 850px){
+
+#skills{
+    margin-top: 30rem;
+}
+#dashboard_img{
+    padding-top: 3em;
+    width: 700px;
+}
+
+figure{
+    height: 30rem;
+    display: flex;
+}
+mat-card-content{
+    padding: 2em 0;
+    form{
+        width: 70%;
+    }
+    .social_login{
+        width: 70%;
+    }
+}
+}
+
+
+@media only screen and (min-width: 1250px){
+    #firebase{
+        padding: 2em;
+        padding-top: 4em;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+    main{
+        position: absolute;
+        z-index: 2;
+        top: 180px;
+        left: 25px;
+    }
+    h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    color:#009688;
+    font-weight: 700;
+    }
+
+    figure{
+        height: 30rem;
+        z-index: 1;
+        position: absolute;
+        top: 0px;
+        left: 250px;
+    }
+
+    #dashboard_img{
+        padding-top: 0em;
+        width: 700px;
+    }
+    mat-card-content{
+    padding: 2em 0;
+    form{
+        width: 60%;
+    }
+    .social_login{
+        width: 60%;
+    }
+}
+}
+
+@media only screen and (min-width: 1350px){
+    #skills{
+        margin-top: 38rem;
+        width: 75%;
+    }
+    main{
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        height: 4rem;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 2;
+        top: 180px;
+        left: 225px;
+    }
+    figure{
+        display: flex;
+        z-index: 1;
+        height: 30rem;
+        position: absolute;
+        top: 60px;
+        left: 100px;
+    }
+    mat-card-content{
+    padding: 2em 0;
+    form{
+        width: 50%;
+    }
+    .social_login{
+        width: 50%;
+    }
+}
+
+}
