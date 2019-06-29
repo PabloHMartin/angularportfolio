@@ -12,24 +12,14 @@
     <h2>Autenticación</h2>
     <p>Autenticación con email y redes sociales</p>
   </header>
-  <mat-card-content>
-        <form>
-        <mat-form-field  appearance="outline">
-           <mat-label>Email</mat-label>
-            <input matInput placeholder="email@email.com">
-            <mat-icon matSuffix color="primary">email</mat-icon>
-        </mat-form-field>
-        <mat-form-field  appearance="outline">
-           <mat-label>Password</mat-label>
-            <input matInput placeholder="Password">
-            <mat-icon matSuffix color="primary">lock</mat-icon>
-        </mat-form-field>
-        <button mat-raised-button color="primary">Login</button>
-      </form>
-      <div class="social_login"> 
-        <button mat-raised-button color="primary"><i class="fab fa-google"></i><span>Login Google</span></button>
-        <button mat-raised-button color="primary"><i class="fab fa-facebook-f"></i><span>Login Facebook</span></button>
+  <mat-card-content *ngIf="auth.user$ | async as user; else login">
+      <div class="bienvenida">
+        <img src="{{user.photoURL}}" class="avatar" alt="avatar">
+        <div class="hola">Hola {{user.displayName}}!</div>        
       </div>
+
+      <button class="logout" color="accent" mat-raised-button (click)="auth.signOut()"><i class="fas fa-sign-out-alt"></i><span>Logout</span></button>
+
     </mat-card-content>
 </mat-card>
 
@@ -63,3 +53,25 @@
 </mat-card>
 </section>
 </section>
+
+    <ng-template #login>
+      <mat-card-content>
+        <form #form="ngForm" (ngSubmit)="signIn(form)">
+        <mat-form-field  appearance="outline">
+           <mat-label>Email</mat-label>
+            <input matInput placeholder="email@email.com" disabled>
+            <mat-icon matSuffix color="primary">email</mat-icon>
+        </mat-form-field>
+        <mat-form-field  appearance="outline">
+           <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" disabled>
+            <mat-icon matSuffix color="primary">lock</mat-icon>
+        </mat-form-field>
+        <button type="submit" [disabled]="form.invalid" mat-raised-button color="primary">Login</button>
+      </form>
+      <div class="social_login"> 
+        <button mat-raised-button color="primary" (click)="auth.webGoogleLogin()"><i class="fab fa-google"></i><span>Login Google</span></button>
+        <button mat-raised-button color="primary" (click)="auth.webfacebookLogin()"><i class="fab fa-facebook-f"></i><span>Login Facebook</span></button>
+      </div>
+      </mat-card-content>
+    </ng-template>

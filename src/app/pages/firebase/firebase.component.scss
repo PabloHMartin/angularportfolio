@@ -114,6 +114,27 @@ mat-card{
 }
 
 
+.bienvenida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    height: 15rem;
+    padding-top: 2em;
+    div{
+        margin: 1em;
+    }
+    .hola{
+        font-size: 1.5em;
+        color: #048376;
+    }
+    .avatar {
+        vertical-align: middle;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+}
 @media only screen and (min-width: 850px){
 
 #skills{

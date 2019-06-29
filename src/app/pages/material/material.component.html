@@ -1,9 +1,229 @@
 <section id="material">
-      <main>
+  <main>
     <article>
     <h2>Material Design</h2>
     <p class="subtitle">El diseño creado por Google, un tu web</p>
-  </article>
-  <figure><img id="dashboard_img" src="../../../assets/images/material.svg" alt="angular_developer"> </figure>
-</main>
+    </article>
+    <figure><img id="dashboard_img" src="../../../assets/images/material.svg" alt="angular_developer"> </figure>
+  </main>
+  <section id="buttons_indicators">
+    <mat-card>
+      <header>
+        <h2>Botones e indicadores</h2>
+        <p>Botones estilo material</p>
+      </header>
+      <mat-card-content>
+        <h3>Basic Buttons</h3>
+        <div class="example-button-row">
+          <button mat-button>Basic</button>
+          <button mat-button color="primary">Primary</button>
+          <button mat-button color="accent">Accent</button>
+          <button mat-button color="warn">Warn</button>
+        </div>
+        <h3>Raised Buttons</h3>
+        <div class="example-button-row">
+          <button mat-raised-button>Basic</button>
+          <button mat-raised-button color="primary">Primary</button>
+          <button mat-raised-button color="accent">Accent</button>
+          <button mat-raised-button color="warn">Warn</button>
+          <button mat-raised-button disabled>Disabled</button>
+          <a mat-raised-button routerLink=".">Link</a>
+        </div>
+
+        <h3>Stroked Buttons</h3>
+        <div class="example-button-row">
+          <button mat-stroked-button>Basic</button>
+          <button mat-stroked-button color="primary">Primary</button>
+          <button mat-stroked-button color="accent">Accent</button>
+          <button mat-stroked-button color="warn">Warn</button>
+          <button mat-stroked-button disabled>Disabled</button>
+          <a mat-stroked-button routerLink=".">Link</a>
+        </div>
+
+        <h3>Flat Buttons</h3>
+        <div class="example-button-row">
+          <button mat-flat-button>Basic</button>
+          <button mat-flat-button color="primary">Primary</button>
+          <button mat-flat-button color="accent">Accent</button>
+          <button mat-flat-button color="warn">Warn</button>
+          <button mat-flat-button disabled>Disabled</button>
+          <a mat-flat-button routerLink=".">Link</a>
+        </div>
+
+        <h3>Icon Buttons</h3>
+        <div class="example-button-row">
+          <button mat-icon-button aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-icon-button color="primary" aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-icon-button color="accent" aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-icon-button disabled aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </div>
+
+        <h3>Fab Buttons</h3>
+        <div class="example-button-row">
+          <button mat-fab>Basic</button>
+          <button mat-fab color="primary">Primary</button>
+          <button mat-fab color="accent">Accent</button>
+          <button mat-fab color="warn">Warn</button>
+          <button mat-fab disabled>Disabled</button>
+          <button mat-fab aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <a mat-fab routerLink=".">Link</a>
+        </div>
+
+        <h3>Mini Fab Buttons</h3>
+        <div class="example-button-row">
+          <button mat-mini-fab>Basic</button>
+          <button mat-mini-fab color="primary">Primary</button>
+          <button mat-mini-fab color="accent">Accent</button>
+          <button mat-mini-fab color="warn">Warn</button>
+          <button mat-mini-fab disabled>Disabled</button>
+          <button mat-mini-fab aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <a mat-mini-fab routerLink=".">Link</a>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </section>
+
+
+  <section id="toogles">
+    <mat-card>
+      <header>
+        <h2>Toogles</h2>
+        <p>Botones toogle</p>
+      </header>
+      <mat-card-content>
+        <mat-button-toggle-group #group="matButtonToggleGroup">
+          <mat-button-toggle value="left" aria-label="Text align left">
+            <mat-icon>format_align_left</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="center" aria-label="Text align center">
+            <mat-icon>format_align_center</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="right" aria-label="Text align right">
+            <mat-icon>format_align_right</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="justify" disabled aria-label="Text align justify">
+            <mat-icon>format_align_justify</mat-icon>
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+        <div class="example-selected-value">Selected value: {{group.value}}</div>
+      </mat-card-content>
+    </mat-card>
+  </section>
+
+  <section id="badges">
+    <mat-card>
+            <header>
+        <h2>Badges</h2>
+        <p>Esos pequeños indicadores</p>
+      </header>
+      <mat-card-content>
+          <p>
+        <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
+      </p>
+
+      <p>
+        Button with a badge on the left
+        <button mat-raised-button color="primary"
+            matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+          Action
+        </button>
+      </p>
+
+      <p>
+        Icon with a badge
+        <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+          <!-- Include text description of the icon's meaning for screen-readers -->
+          <span class="cdk-visually-hidden">
+            Example with a home icon with overlaid badge showing the number 15
+          </span>
+      </p>
+      </mat-card-content>
+    </mat-card>
+  </section>
+
+  <section id="chips">
+    <mat-card>
+          
+        <header>
+        <h2>Chips</h2>
+        <p>Esos pequeños indicadores</p>
+      </header>
+      <mat-card-content>
+        <mat-chip-list aria-label="Fish selection">
+      <mat-chip>One fish</mat-chip>
+      <mat-chip>Two fish</mat-chip>
+      <mat-chip color="primary" selected>Primary fish</mat-chip>
+      <mat-chip color="accent" selected>Accent fish</mat-chip>
+    </mat-chip-list>
+
+
+    <mat-form-field class="example-chip-list">
+      <mat-chip-list #chipList aria-label="Fruit selection">
+        <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
+                [removable]="removable" (removed)="remove(fruit)">
+          {{fruit.name}}
+          <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+        </mat-chip>
+        <input placeholder="New fruit..."
+              [matChipInputFor]="chipList"
+              [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+              [matChipInputAddOnBlur]="addOnBlur"
+              (matChipInputTokenEnd)="add($event)">
+      </mat-chip-list>
+    </mat-form-field>
+      </mat-card-content>
+    </mat-card>
+  </section>
+
+  <section id="buttomsheet">
+    <mat-card>
+        <header>
+          <h2>Snackbar</h2>
+          <p>Popup con mensaje en pate inferior</p>
+      </header>
+      <mat-card-content>
+       <mat-form-field>
+          <input matInput value="Fiesta!" placeholder="Message" #message>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput value="Bailar" placeholder="Action" #action>
+        </mat-form-field>
+
+        <button mat-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+      </mat-card-content>
+    </mat-card>
+  </section>
+
+  <section id="tooltip">
+    <mat-card>
+
+      <header>
+        <h2>Tooltip</h2>
+        <p>Información útil al hacer hover/mantener pulsado en móvil</p>
+      </header>
+      <mat-card-content>
+        <button mat-raised-button
+        matTooltip="Info about the action"
+        aria-label="Button that displays a tooltip when focused or hovered over">
+        Action
+      </button>
+    </mat-card-content>
+  </mat-card>
+  </section>
 </section>

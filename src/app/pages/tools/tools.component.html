@@ -1,0 +1,51 @@
+<section id="home">
+  <main>
+    <h2>Herramientas</h2>
+    <p class="subtitle">Algunas herramientas y features</p>
+  </main>
+  <figure><img id="dashboard_img" src="../../../assets/images/tools.svg" alt="angular_developer"> </figure>
+<section id="content"></section>
+    <section id="paypal">
+    <mat-card>
+      <header>
+        <h2>Paypal</h2>
+        <p class="subtitle">Pagos con Paypal</p>
+      </header>
+      <mat-card-content>
+        <div class="product" *ngIf="!paidFor">
+          <div class="product_desc">{{ product.price}}€</div>
+          <div class="product_desc">{{ product.description }}</div>
+          <img class="product_img" [src]="product.img" alt="cafe">
+        </div>
+
+        <div class="product" *ngIf="paidFor">
+          <div class="product_desc">Gracias!</div>
+          <img class="product_img" src="../../../assets/images/thank-you.svg" alt="cafe">
+        </div>
+
+        <div #paypal>
+        </div>
+
+      </mat-card-content>
+    </mat-card>
+  </section>
+
+
+      <section id="paypal">
+    <mat-card>
+      <header>
+        <h2>Stripe</h2>
+        <p class="subtitle">Pagos con Stripe</p>
+      </header>
+      <mat-card-content>
+        <button (click)="checkout($event)">
+          Buy for ${{ amount / 100 }}.00
+        </button>
+        <hr>
+        <div *ngIf="loading">Loading...</div>
+        <pre *ngIf="confirmation">{{confirmation | json}}</pre>
+      </mat-card-content>
+    </mat-card>
+  </section>
+
+</section>

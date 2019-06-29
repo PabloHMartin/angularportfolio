@@ -29,3 +29,169 @@ figure{
 #dashboard_img{
     width: 300px;
 }
+
+#buttons_indicators{
+    width: 100%;
+    margin-top: 18rem;
+}
+
+
+#toogles{
+    width: 100%;
+    margin-top: 3rem;
+    mat-card{
+        height: 15rem;
+
+        mat-card-content{
+            display: flex;
+            align-items: center;
+            align-content: center;
+        }
+    }
+}
+#badges{
+    width: 100%;
+    margin-top: 3rem;
+    mat-card-content{
+        display: flex;
+        p{
+            padding: 1em;
+            button{
+                margin: 0.5em;
+            }
+        }
+    }
+}
+
+#chips{
+        width: 100%;
+    margin-top: 3rem;
+    mat-card-content{
+        display: flex;
+        p{
+            padding: 1em;
+            button{
+                margin: 0.5em;
+            }
+        }
+    }
+}
+
+#buttomsheet{
+   width: 100%;
+}
+
+#tooltip{
+    width: 100%;
+}
+mat-card{
+    margin-top: 3em;
+    width: 100%;
+        header{
+            h2{
+                font-family: 'Montserrat', sans-serif;
+                color:#009688;
+                font-weight: 700;
+                font-size: 1.5em;
+            }
+            p{
+            font-size: 0.8em;
+            color: gray;
+            }
+        }
+        mat-card-content{
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            h3{
+                margin-top: 2em;
+            }
+        }
+}
+
+.example-chip-list {
+    margin-top: 1.5em;
+    width: 100%;
+}
+
+@media only screen and (min-width: 850px){
+    main{
+        h2{
+            font-size: 2em;
+        }
+    }
+    #dashboard_img{
+        padding-top: 3em;
+        width: 700px;
+    }
+    figure{
+        height: 30rem;
+        display: flex;
+    }
+    mat-card{
+        mat-card-content{
+            align-items: center;
+        }
+    }
+    #buttons_indicators{
+        width: 100%;
+        margin-top: 32rem;
+    }
+}
+
+
+@media only screen and (min-width: 1350px){
+        
+        main{
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        height: 4rem;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 2;
+        top: 180px;
+        left: 225px;
+    }
+    figure{
+        display: flex;
+        z-index: 1;
+        height: 30rem;
+        position: absolute;
+        top: 60px;
+        left: 100px;
+    }
+
+    #dashboard_img{
+        padding-top: 3em;
+        width: 700px;
+    }
+    figure{
+        height: 30rem;
+        display: flex;
+    }
+    mat-card{
+        mat-card-content{
+            align-items: center;
+        }
+    }
+    #buttons_indicators{
+        width: 75%;
+        margin-top: 34rem;
+    }
+    #toogles{
+        width: 75%;
+    }
+    #badges{
+        width: 75%;
+    }
+    #chips{
+        width: 75%;
+    }
+    #buttomsheet{
+        width: 75%;
+    }
+    #tooltip{
+        width: 75%;
+    }
+}
