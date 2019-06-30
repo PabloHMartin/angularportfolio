@@ -31,16 +31,27 @@
   </section>
 
 
-      <section id="paypal">
+      <section id="stripe">
     <mat-card>
       <header>
         <h2>Stripe</h2>
         <p class="subtitle">Pagos con Stripe</p>
       </header>
       <mat-card-content>
-        <button (click)="checkout($event)">
-          Buy for ${{ amount / 100 }}.00
+                <div class="product" *ngIf="!paidFor">
+          <div class="product_desc">{{ product.description }}</div>
+          <img class="product_img" [src]="product.img" alt="cafe">
+           <button (click)="checkout($event)" mat-raised-button color="primary">
+          Pagar ${{ product.price }}.00
         </button>
+        </div>
+
+        <div class="product" *ngIf="paidFor">
+          <div class="product_desc">Gracias!</div>
+          <img class="product_img" src="../../../assets/images/thank-you.svg" alt="cafe">
+        </div>
+
+       
         <hr>
         <div *ngIf="loading">Loading...</div>
         <pre *ngIf="confirmation">{{confirmation | json}}</pre>

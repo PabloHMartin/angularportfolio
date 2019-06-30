@@ -35,6 +35,7 @@ export class ToolsComponent implements OnInit {
       locale: 'auto',
       source: async (source) => {
         this.loading = true;
+
         this.loading = false;
       }
     });
@@ -71,9 +72,9 @@ export class ToolsComponent implements OnInit {
 
   async checkout(e){
     this.handler.open({
-      name: 'Pablo H. Martín',
-      description: this.description,
-      amount: this.amount,
+      name: 'Café',
+      description: this.product.description,
+      amount: this.product.price*100,
     });
     e.preventDefaul();
   }
